@@ -37,4 +37,23 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom button {
+    width: 364px;
+    height: 61px;
+    background: #CBCBCB;
+    border-radius: 50px;
+    text-decoration: none;
+    border: none;
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.018em;
+    color: #FFFFFF;
+    padding: 0px 70px;
 }
