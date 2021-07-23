@@ -9,8 +9,9 @@ let selectedDessertName;
 let checkDessertPrice;
 let selectedDessertPrice;
 let totalPrice;
+let finalPrice;
 
-function selectPlate(plate) {    
+function selectPlate(selected) {    
     const element = document.querySelector('.plates .selected');
     
 
@@ -19,18 +20,17 @@ function selectPlate(plate) {
         number--;
     }
 
-    const clickedPlate = document.querySelector(plate);
-    clickedPlate.classList.add("selected");    
-    selectedPlateName = clickedPlate.querySelector(".first-description").innerHTML;  
+    selected.classList.add("selected");    
+    selectedPlateName = selected.querySelector(".first-description").innerHTML;  
     console.log(selectedPlateName);
-    checkPlatePrice = clickedPlate.querySelector(".price").innerHTML;  
+    checkPlatePrice = selected.querySelector(".price").innerHTML;  
     console.log(checkPlatePrice);
     selectedPlatePrice = parseFloat(checkPlatePrice.replace("R$", "").replace(",","."));
     console.log(selectedPlatePrice);
     sumNumber();
 }
 
-function selectBeverage(beverage) {    
+function selectBeverage(selected) {    
     const element = document.querySelector('.beverages .selected');
 
     if(element !== null) {        
@@ -38,18 +38,17 @@ function selectBeverage(beverage) {
         number--;
     }
 
-    const clickedBeverage = document.querySelector(beverage);
-    clickedBeverage.classList.add("selected");    
-    selectedBeverageName = clickedBeverage.querySelector(".first-description").innerHTML;  
+    selected.classList.add("selected");    
+    selectedBeverageName = selected.querySelector(".first-description").innerHTML;  
     console.log(selectedBeverageName);
-    checkBeveragePrice = clickedBeverage.querySelector(".price").innerHTML;  
+    checkBeveragePrice = selected.querySelector(".price").innerHTML;  
     console.log(checkBeveragePrice);
     selectedBeveragePrice = parseFloat(checkBeveragePrice.replace("R$", "").replace(",","."));
     console.log(selectedBeveragePrice);
     sumNumber();
 }
 
-function selectDessert(dessert) {    
+function selectDessert(selected) {    
     const element = document.querySelector('.desserts .selected');
 
     if(element !== null) {        
@@ -57,11 +56,10 @@ function selectDessert(dessert) {
         number--;
     }
 
-    const clickedDessert = document.querySelector(dessert);
-    clickedDessert.classList.add("selected");    
-    selectedDessertName = clickedDessert.querySelector(".first-description").innerHTML;  
+    selected.classList.add("selected");    
+    selectedDessertName = selected.querySelector(".first-description").innerHTML;  
     console.log(selectedDessertName);
-    checkDessertPrice = clickedDessert.querySelector(".price").innerHTML;  
+    checkDessertPrice = selected.querySelector(".price").innerHTML;  
     console.log(checkDessertPrice);
     selectedDessertPrice = parseFloat(checkDessertPrice.replace("R$", "").replace(",","."));
     console.log(selectedDessertPrice);  
@@ -79,13 +77,15 @@ function sumNumber() {
 
     if(selectedPlatePrice !== undefined && selectedBeveragePrice !== undefined && selectedDessertPrice !== undefined) {
         totalPrice = selectedPlatePrice + selectedBeveragePrice + selectedDessertPrice;
-        console.log(totalPrice); 
+        finalPrice = totalPrice.toFixed(2);
+        console.log(finalPrice); 
     }
 }
 
 function toOrderCombo() {
     if(number === 3) {
-        alert("Jogar para o Whatsapp!");
+        const blur = document.querySelector('body ');
+        blur.classList.add("blur");
     }
 }
 
