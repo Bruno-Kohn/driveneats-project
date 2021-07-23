@@ -1,9 +1,3 @@
-/*.container {
-    width: 414px;
-    height: auto;
-    background-color: #e5e5e5;
-}*/
-
 /*===================TOPO===================*/
 
 .top {
@@ -37,37 +31,6 @@
     color: #FFFFFF;
 }
 
-/*===================BOTTOM===================*/
-
-.bottom {    
-    background: rgb(129, 110, 110);
-    width: 414px;
-    height: 92px;
-    background: #fff;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.bottom button {
-    width: 364px;
-    height: 61px;
-    background: #CBCBCB;
-    border-radius: 50px;
-    text-decoration: none;
-    border: none;
-    font-family: Roboto;
-    font-size: 20px;
-    line-height: 23px;
-    text-align: center;
-    letter-spacing: 0.018em;
-    color: #FFFFFF;
-    padding: 0px 70px;
-}
-
 /*===================CONTENT===================*/
 
 .content {
@@ -88,7 +51,9 @@
     padding-left: 15px;
 }
 
-.plates {
+.plates,
+.beverages,
+.desserts {
     width: 414px; /*verificar se precisa alterar*/
     height: auto;
     display: flex;
@@ -122,6 +87,10 @@ ion-icon {
     display: none;
 }
 
+.selected ion-icon {
+    display: inherit;
+}
+
 .description {
     width: 414px; /*verificar se precisa alterar*/
     height: auto;
@@ -149,10 +118,45 @@ ion-icon {
 }
 
 .p-boxes {
-    height: 110px;
+    height: 115px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 4px 0;
+}
+
+.selected {
+    border: 5px solid #32B72F;
+}
+
+/*===================BOTTOM===================*/
+
+.bottom {    
+    background: rgb(129, 110, 110);
+    width: 414px;
+    height: 92px;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom button {
+    width: 364px;
+    height: 61px;
+    background: #CBCBCB;
+    border-radius: 50px;
+    text-decoration: none;
+    border: none;
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.018em;
+    color: #FFFFFF;
+    padding: 0px 70px;
 }
 
