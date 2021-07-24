@@ -23,12 +23,9 @@ function selectPlate(selected) {
     }
 
     selected.classList.add("selected");    
-    selectedPlateName = selected.querySelector(".first-description").innerHTML;  
-    console.log(selectedPlateName);
-    checkPlatePrice = selected.querySelector(".price").innerHTML;  
-    console.log(checkPlatePrice);
+    selectedPlateName = selected.querySelector(".first-description").innerHTML;
+    checkPlatePrice = selected.querySelector(".price").innerHTML;
     selectedPlatePrice = parseFloat(checkPlatePrice.replace("R$", "").replace(",","."));
-    console.log(selectedPlatePrice);
     sumNumber();
 }
 
@@ -41,12 +38,9 @@ function selectBeverage(selected) {
     }
 
     selected.classList.add("selected");    
-    selectedBeverageName = selected.querySelector(".first-description").innerHTML;  
-    console.log(selectedBeverageName);
-    checkBeveragePrice = selected.querySelector(".price").innerHTML;  
-    console.log(checkBeveragePrice);
+    selectedBeverageName = selected.querySelector(".first-description").innerHTML;
+    checkBeveragePrice = selected.querySelector(".price").innerHTML;
     selectedBeveragePrice = parseFloat(checkBeveragePrice.replace("R$", "").replace(",","."));
-    console.log(selectedBeveragePrice);
     sumNumber();
 }
 
@@ -59,18 +53,14 @@ function selectDessert(selected) {
     }
 
     selected.classList.add("selected");    
-    selectedDessertName = selected.querySelector(".first-description").innerHTML;  
-    console.log(selectedDessertName);
-    checkDessertPrice = selected.querySelector(".price").innerHTML;  
-    console.log(checkDessertPrice);
+    selectedDessertName = selected.querySelector(".first-description").innerHTML;
+    checkDessertPrice = selected.querySelector(".price").innerHTML;
     selectedDessertPrice = parseFloat(checkDessertPrice.replace("R$", "").replace(",","."));
-    console.log(selectedDessertPrice);  
     sumNumber();  
 }
 
 function sumNumber() {
     number++;
-    console.log(number);
     if(number === 3) {        
         const button = document.querySelector('button');
         button.classList.add("check");
@@ -80,7 +70,6 @@ function sumNumber() {
     if(selectedPlatePrice !== undefined && selectedBeveragePrice !== undefined && selectedDessertPrice !== undefined) {
         totalPrice = selectedPlatePrice + selectedBeveragePrice + selectedDessertPrice;
         finalPrice = totalPrice.toFixed(2);
-        console.log(finalPrice); 
     }
 }
 
