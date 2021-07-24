@@ -10,6 +10,8 @@ let checkDessertPrice;
 let selectedDessertPrice;
 let totalPrice;
 let finalPrice;
+let customer;
+let adress;
 
 function selectPlate(selected) {    
     const element = document.querySelector('.plates .selected');
@@ -84,10 +86,34 @@ function sumNumber() {
 
 function toOrderCombo() {
     if(number === 3) {
-        const blur = document.querySelector('body ');
-        blur.classList.add("blur");
+        //customer = prompt("Digite seu nome: ");
+        //adress = prompt("Digite seu endereço: ");
+        const confirmation = document.querySelector(".backdrop-background");
+        confirmation.classList.remove("hidden");
+        const modal = document.querySelector(".modal-confirm-ordering");
+        modal.classList.remove("hidden");
+        const orderedPlate = document.querySelector(".orderedPlate");
+        orderedPlate.innerHTML = selectedPlateName;
+        const orderedPlatePrice = document.querySelector(".orderedPlatePrice");
+        orderedPlatePrice.innerHTML = checkPlatePrice;
+        const orderedBeverage = document.querySelector(".orderedBeverage");
+        orderedBeverage.innerHTML = selectedBeverageName;
+        const orderedBeveragePrice = document.querySelector(".orderedBeveragePrice");
+        orderedBeveragePrice.innerHTML = checkBeveragePrice;
+        const orderedDessert = document.querySelector(".orderedDessert");
+        orderedDessert.innerHTML = selectedDessertName;
+        const orderedDessertPrice = document.querySelector(".orderedDessertPrice");
+        orderedDessertPrice.innerHTML = checkDessertPrice;
+        const finalPriceOrdered = document.querySelector(".finalPriceOrdered");
+        finalPriceOrdered.innerHTML = "R$" + finalPrice;
     }
 }
 
+function backToOrder() {
+        const confirmation = document.querySelector(".backdrop-background");
+        confirmation.classList.add("hidden");
+        const modal = document.querySelector(".modal-confirm-ordering");
+        modal.classList.add("hidden");
+}
 
 

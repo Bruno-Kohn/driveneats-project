@@ -164,8 +164,83 @@ ion-icon {
     background-color: #32B72F;
 }
 
-/*===================BLUR===================*/
+/*===================CONFIRMATION===================*/
 
-.blur {
-    opacity: 0.15;
+.backdrop-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    z-index: 5;
+    width: 414px;
+    height: 1026px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-confirm-ordering {
+    width: 377px;
+    height: 353px;
+    background: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+}
+
+.plate-order,
+.beverage-order,
+.dessert-order,
+.total-order,
+.modal-message {
+    display: flex;
+    justify-content: space-between;
+    font-family: Roboto;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+    color: #FFFFFF;
+}
+
+.total-order,
+.modal-message {
+    font-weight: bold;
+}
+
+.modal-message {
+    justify-content: center;
+}
+
+.confirmation {
+    width: 329px;
+    height: 52px;
+    background: #FFFFFF;
+    border-radius: 100px;   
+    border: none;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+    color: #50D074;
+}
+
+.cancelation {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.018em;
+    color: #FFFFFF;
+    background-color: #50D074;
+    border: none;
+}
+
+
+.hidden {
+    display: none;
 }
