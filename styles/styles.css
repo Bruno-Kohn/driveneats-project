@@ -236,10 +236,11 @@ ion-icon {
     line-height: 23px;
     letter-spacing: 0.018em;
     color: #FFFFFF;
-    background-color: #50D074;
+    background-color: #50d074;
     border: none;
+    width: 110px;
+    margin: 0 auto;
 }
-
 
 .hidden {
     display: none;

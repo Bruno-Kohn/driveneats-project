@@ -86,8 +86,8 @@ function sumNumber() {
 
 function toOrderCombo() {
     if(number === 3) {
-        //customer = prompt("Digite seu nome: ");
-        //adress = prompt("Digite seu endereço: ");
+        customer = prompt("Digite seu nome: ");
+        adress = prompt("Digite seu endereço: ");
         const confirmation = document.querySelector(".backdrop-background");
         confirmation.classList.remove("hidden");
         const modal = document.querySelector(".modal-confirm-ordering");
@@ -114,6 +114,23 @@ function backToOrder() {
         confirmation.classList.add("hidden");
         const modal = document.querySelector(".modal-confirm-ordering");
         modal.classList.add("hidden");
+}
+
+function sendMessage() {
+    const message = `
+    Olá, gostaria de fazer o pedido:
+    - Prato: ${selectedPlateName}
+    - Bebida: ${selectedBeverageName}
+    - Sobremesa: ${selectedDessertName}    
+    Total: R$${finalPrice}
+
+    Nome: ${customer}
+    Endereço: ${adress}
+    `
+
+    const encodedMessage = encodeURIComponent(message);
+
+    window.open(`https://wa.me/5521981037125?text=${encodedMessage}`);
 }
 
 
